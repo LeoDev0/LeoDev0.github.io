@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet" />
+  <title>LeoDev</title>
+</head>
+
+<body>
+  <div class="section">
+    <img src="images/photo.jpg" alt="perfil" />
+    <h1>Sou o Leo e gosto de:</h1>
+    <h2 id="typed"></h2>
+
+    <div class="video-container">
+      <div class="navbar">
+        <div class="logo"><a href="#">LEO</a></div>
+        <div class="navbar-icons">
+          <a target="_blank" href="https://github.com/leodev0">
+            <i class="fab fa-github"></i>
+          </a>
+          <a target="_blank" href="#">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a target="_blank" href="mailto:leo.80@protonmail.com" title="leo.80@protonmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="color-overlay"></div>
+      <video autoplay loop muted>
+        <source src="images/bg5.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="section2">
+
+      <div class="experience-card">
+        <i class="fas fa-laptop"></i>
+        <h2>Frontend</h2>
+        <ul>
+          <li>HTML5 & CSS3</li>
+          <li>Bootstrap</li>
+          <li>JavaScript (ES6)</li>
+          <li>API / Ajax</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <i class="fas fa-server"></i>
+        <h2>Backend</h2>
+        <ul>
+          <li>PHP</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <i class="fas fa-tools"></i>
+        <h2>Ferramentas</h2>
+        <ul>
+          <li>Git / Github</li>
+          <li>Linux</li>
+          <li>Python (Scripting)</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="section3">
+      <h1>Projetos</h1>
+
+      <div class="project-card">
+        <a href="images/pjweather.gif">
+          <img src="images/pjweather.gif" />
+        </a>
+        <div class="project-info">
+          <h2>Weather WebApp</h2>
+          <p>
+            Webapp em formato de celular para simular um app mobile que checa
+            o tempo em qualquer local do mundo com campo de pesquisa de
+            cidade/região ou usando a API de geolocalização do navegador para
+            checar a sua localização atual. Feito usando HTML, CSS, JavaScript
+            e utilizando os dados da API do OpenWeatherMap e a biblioteca
+            Leaflet para prover os mapas.
+          </p>
+          <a target="_blank" href="#">Visite o site</a>
+          <a target="_blank" href="https://github.com/LeoDev0/Weather-Web-App">Código Fonte</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <h2>Validação de formulário</h2>
+          <p>
+            Formulário com validação dinâmica de alguns dos campos mais usados
+            utilizando Regex (expressões regulares) e JavaScript puro.
+          </p>
+          <a target="_blank" href="#">Visite o site</a>
+          <a target="_blank" href="https://github.com/LeoDev0/Compilado-de-validacao-de-formulario">Código Fonte</a>
+        </div>
+        <a href="images/pjval.gif">
+          <img src="images/pjval.gif" />
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="images/eei.gif">
+          <img src="images/eei.jpg" />
+        </a>
+        <div class="project-info">
+          <h2>Onde está a Estação Espacial Internacional?</h2>
+          <p>Site que mostra em tempo real onde está a Estação Espacial Internacional
+            no globo, além de sua altitude, velocidade e coordenadas geográficas. Há
+            também a opção de assistir à livestream servida pela NASA com imagens da
+            Terra transmitidas pela EEI e saber a que distância você próprio está dela.
+            Feito usando os dados da API do Wheretheiss, imagens da NASA e a biblioteca
+            Leaflet para os mapas.
+          </p>
+          <a target="_blank" href="#">Visite o site</a>
+          <a target="_blank" href="https://github.com/LeoDev0/onde-esta-a-EEI">Código Fonte</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/cfd8b43b94.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
