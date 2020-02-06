@@ -184,13 +184,18 @@ body {
   -webkit-box-direction: normal;
   flex-flow: row wrap;
   justify-content: space-around;
+  margin: 20px;
   margin-bottom: 90px;
 }
 
 .project-card img {
-  /* width: 250px; */
-  max-width: 30rem;
+  width: 570px;
+  max-width: 100%;
   height: auto;
+}
+
+.project-card h2 {
+  margin-top: 0;
 }
 
 .project-info a {
