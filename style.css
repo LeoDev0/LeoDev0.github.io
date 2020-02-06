@@ -36,8 +36,14 @@ body {
   z-index: 1;
   border-radius: 50%;
   width: 210px;
-  height: 210px;
+  height: auto;
   margin-bottom: 30px;
+}
+
+@media (max-width: 550px) {
+  .section img {
+    width: 150px;
+  }
 }
 
 .section h1 {
