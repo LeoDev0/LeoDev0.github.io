@@ -204,6 +204,10 @@ body {
   margin-top: 0;
 }
 
+.reverse-card {
+  flex-direction: row-reverse;
+}
+
 .project-info a {
   text-decoration: none;
   color: #e25b5b;
