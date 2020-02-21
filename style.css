@@ -7,6 +7,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "Lexend Deca", sans-serif;
+  background-color: #e25b5b8f;
 }
 
 .section {
@@ -194,10 +195,31 @@ body {
   margin-bottom: 90px;
 }
 
+/* .project-card > a {
+  overflow: hidden;
+  background-color: #e25b5b8f;
+} */
+
+/* Efeito de fundo vermelho quando passa o mouse por cima da imagem do projeto */
+.project-card .gif-link {
+  overflow: hidden;
+  background-color: #e25b5b8f;
+}
+
 .project-card img {
   width: 570px;
   max-width: 100%;
   height: auto;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+/* Efeito de zoom na imagem do projeto quando passa o mouse por cima */
+.project-card img:hover {
+  opacity: 0.5;
+  background-position: right;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
 }
 
 .project-card h2 {
@@ -205,9 +227,12 @@ body {
 }
 
 .reverse-card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
   flex-direction: row-reverse;
 }
 
+/* botões com os links do projeto */
 .project-info a {
   text-decoration: none;
   color: #e25b5b;
