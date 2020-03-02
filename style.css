@@ -79,16 +79,21 @@ body {
   justify-content: space-between;
 }
 
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all ease 0.2s;
+}
+
+.navbar a:hover {
+  color: #df6f6f;
+}
+
 .logo {
   letter-spacing: 6px;
   z-index: 2;
   font-size: 20px;
   font-weight: bold;
-}
-
-.logo a {
-  text-decoration: none;
-  color: #ffffff;
 }
 
 .navbar-icons {
@@ -97,9 +102,7 @@ body {
 }
 
 .navbar-icons a {
-  color: #ffffff;
   margin-left: 20px;
-  text-decoration: none;
 }
 
 .logo,
@@ -118,8 +121,6 @@ body {
 
 .container {
   width: 100%;
-  /* padding-right: 15px;
-  padding-left: 15px; */
   margin-right: auto;
   margin-left: auto;
 }
@@ -174,7 +175,6 @@ body {
   justify-content: center;
   -webkit-box-align: space-around;
   align-items: space-around;
-  /* padding: 30px 0; */
 }
 
 .section3 h1 {
@@ -194,11 +194,6 @@ body {
   margin: 20px;
   margin-bottom: 90px;
 }
-
-/* .project-card > a {
-  overflow: hidden;
-  background-color: #e25b5b8f;
-} */
 
 /* Efeito de fundo vermelho quando passa o mouse por cima da imagem do projeto */
 .project-card .gif-link {

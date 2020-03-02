@@ -7,13 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="icon" type="image/ico" href="images/favicon.ico">
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light-border.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css"/>
   <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet" />
   <title>LeoDev</title>
 </head>
 
 <body>
   <div class="section">
-    <img src="images/photo.jpg" alt="perfil" />
+    <img src="images/photo.jpg" id="profile-pic" data-tippy-content="Olá! 😃"  />
     <h1>Sou o Leo e gosto de:</h1>
     <h2 id="typed"></h2>
 
@@ -27,7 +30,7 @@
           <a target="_blank" href="#">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a target="_blank" href="mailto:leo.80@protonmail.com" title="leo.80@protonmail.com">
+          <a target="_blank" href="mailto:leo.80@protonmail.com" data-tippy-content="Email: leo.80@protonmail.com" id="email-icon">
             <i class="fas fa-envelope"></i>
           </a>
         </div>
@@ -151,6 +154,8 @@
 
   <script src="https://kit.fontawesome.com/cfd8b43b94.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="script.js"></script>
 </body>
 
