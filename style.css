@@ -82,6 +82,7 @@ body {
 .navbar a {
   color: #ffffff;
   text-decoration: none;
+  -webkit-transition: all ease 0.2s;
   transition: all ease 0.2s;
 }
 
@@ -128,6 +129,9 @@ body {
 .section2 {
   background-color: #eeeeee;
   /* height: 100vh; */
+}
+
+.skills {
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: horizontal;
@@ -135,6 +139,15 @@ body {
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: center;
+}
+
+.section2 h1 {
+  text-align: center;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  margin-top: 0;
+  color: #675e5a;
 }
 
 .experience-card {
@@ -196,7 +209,12 @@ body {
 }
 
 /* Efeito de fundo vermelho quando passa o mouse por cima da imagem do projeto */
+.project-card a {
+  border-radius: 10px;
+}
+
 .project-card .gif-link {
+  border-radius: 10px;
   overflow: hidden;
   background-color: #e25b5b8f;
 }
