@@ -33,3 +33,9 @@ tippy("#profile-pic", {
   animation: "scale",
   offset: [100, -20]
 });
+
+// Inicializando o efeito de scrollagem
+ScrollOut({
+  once: true,
+  threshold: 0.5
+});
