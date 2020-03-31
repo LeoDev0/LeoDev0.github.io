@@ -260,6 +260,9 @@ body {
 .project-info a:hover {
   background-color: #e25b5b;
   color: #ffffff;
+  -webkit-box-shadow: 0px 6px 17px -4px #e25b5b;
+  -moz-box-shadow: 0px 6px 17px -4px #e25b5b;
+  box-shadow: 0px 6px 17px -4px #e25b5b;
 }
 
 .project-info p {
