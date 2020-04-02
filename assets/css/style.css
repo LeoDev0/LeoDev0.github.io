@@ -248,22 +248,40 @@ body {
 /* botões com os links do projeto */
 .project-info a {
   text-decoration: none;
-  color: #e25b5b;
+  /* color: #e25b5b;
   border: 2px solid #e25b5b;
   border-radius: 24px;
   padding: 10px;
   margin-right: 10px;
   -webkit-transition: ease 0.3s;
-  transition: ease 0.3s;
+  transition: ease 0.3s; */
 }
 
-.project-info a:hover {
+.animated-btn {
+  color: #e25b5b;
+  border: 2px solid #e25b5b;
+  border-radius: 24px !important;
+  padding: 10px;
+  margin-right: 10px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.animated-btn:hover {
+  background-color: #e25b5b;
+  color: #ffffff;
+  box-shadow: 0px 6px 17px -4px #e25b5b;
+}
+
+/* .project-info a:hover {
   background-color: #e25b5b;
   color: #ffffff;
   -webkit-box-shadow: 0px 6px 17px -4px #e25b5b;
   -moz-box-shadow: 0px 6px 17px -4px #e25b5b;
   box-shadow: 0px 6px 17px -4px #e25b5b;
-}
+} */
 
 .project-info p {
   margin-bottom: 40px;
@@ -272,8 +290,108 @@ body {
   line-height: 25px;
 }
 
+.section4 {
+  background-color: #eeeeee;
+  /* height: 100vh; */
+}
+
+.section4 h1 {
+  color: rgb(103, 94, 90);
+  text-align: center;
+  margin: 0;
+  padding-bottom: 40px;
+  padding-top: 50px;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-flow: column nowrap;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.contact-form form {
+  width: 600px;
+  margin: 0 30px;
+}
+
+@media (max-width: 600px) {
+  .contact-form form {
+    width: 100%;
+  }
+}
+
+.contact-form form > * {
+  margin: 10px;
+  width: 95%;
+}
+
+.contact-form input {
+  height: 50px;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.form-field {
+  font-size: 17px;
+  font-family: Noto sans;
+  font-weight: 400;
+  border-radius: 10px;
+  /* border: solid 1px lightgray; */
+  border: none;
+  padding: 10px;
+}
+
+.submit-btn {
+  font-family: Lexend Deca, sans-serif;
+  font-size: 15px;
+}
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  padding: 30px 0;
+  background-color: lightgrey;
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: rgb(226, 91, 91);
+}
+
+.footer-icons {
+  font-size: 25px;
+}
+
+.footer-icons a {
+  margin-left: 20px;
+  color: #ffffff;
+}
+
+.signature {
+  font-size: 13px;
+  color: #675e5a;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
 /* CSS para a animação de fade-in na scrollagem*/
 [data-scroll] {
+  -webkit-transition: opacity 2s;
   transition: opacity 2s;
 }
 
