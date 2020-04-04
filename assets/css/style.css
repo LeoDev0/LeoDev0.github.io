@@ -248,13 +248,6 @@ body {
 /* botões com os links do projeto */
 .project-info a {
   text-decoration: none;
-  /* color: #e25b5b;
-  border: 2px solid #e25b5b;
-  border-radius: 24px;
-  padding: 10px;
-  margin-right: 10px;
-  -webkit-transition: ease 0.3s;
-  transition: ease 0.3s; */
 }
 
 .animated-btn {
@@ -274,14 +267,6 @@ body {
   color: #ffffff;
   box-shadow: 0px 6px 17px -4px #e25b5b;
 }
-
-/* .project-info a:hover {
-  background-color: #e25b5b;
-  color: #ffffff;
-  -webkit-box-shadow: 0px 6px 17px -4px #e25b5b;
-  -moz-box-shadow: 0px 6px 17px -4px #e25b5b;
-  box-shadow: 0px 6px 17px -4px #e25b5b;
-} */
 
 .project-info p {
   margin-bottom: 40px;
@@ -344,7 +329,6 @@ body {
   font-family: Noto sans;
   font-weight: 400;
   border-radius: 10px;
-  /* border: solid 1px lightgray; */
   border: none;
   padding: 10px;
 }
@@ -352,10 +336,20 @@ body {
 .submit-btn {
   font-family: Lexend Deca, sans-serif;
   font-size: 15px;
+  background-color: #e25b5b;
+  color: #ffffff;
+}
+
+.submit-btn:active {
+  position: relative;
+  top: 1px;
 }
 
 footer {
+  display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-flow: column nowrap;
   text-align: center;
   padding: 30px 0;
@@ -364,6 +358,7 @@ footer {
 
 footer a {
   text-decoration: none;
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
 
@@ -377,7 +372,7 @@ footer a:hover {
 
 .footer-icons a {
   margin-left: 20px;
-  color: #ffffff;
+  color: #675e5a;
 }
 
 .signature {

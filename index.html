@@ -177,11 +177,10 @@
     <div class="section4">
       <h1>Entre em contato</h1>
 
-      <div class="contact-form">
-        <!-- <form action="https://send.pageclip.co/vIGEHAXieh11rkr0t6dwapz3EWk9OjvM" class="pageclip-form" method="post"> -->
+      <div class="contact-form" data-scroll>
         <form action="https://send.pageclip.co/vIGEHAXieh11rkr0t6dwapz3EWk9OjvM/contato-portfolio" class="pageclip-form" method="post">
-          <input class="form-field" type="email" name="email" placeholder="Qual seu email?"><br>
-          <textarea class="form-field" name="corpo" cols="30" rows="10" placeholder="Quer me contratar? Me escreva uma mensagem."></textarea><br>
+          <input id="email-input" class="form-field" type="email" name="email" required placeholder="Qual seu email?"><br>
+          <textarea id="message-input" class="form-field" name="corpo" cols="30" rows="10" required placeholder="Me escreva uma mensagem."></textarea><br>
 
           <button type="submit" class="animated-btn submit-btn pageclip-form__submit">
             <span>Enviar mensagem</span>
@@ -211,6 +210,7 @@
   <script src="https://unpkg.com/@popperjs/core@2"></script>
   <script src="https://unpkg.com/tippy.js@6"></script>
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  <script src="assets/js/form-validation.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 
