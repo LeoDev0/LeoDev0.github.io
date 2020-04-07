@@ -375,13 +375,16 @@ footer a:hover {
   color: #675e5a;
 }
 
+.signature-container {
+  margin-top: 20px;
+}
+
 .signature {
   font-size: 13px;
   color: #675e5a;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
   font-weight: 800;
-  margin-top: 20px;
 }
 
 /* CSS para a animação de fade-in na scrollagem*/
