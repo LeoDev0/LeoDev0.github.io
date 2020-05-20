@@ -8,11 +8,11 @@ var options = {
     "<i>&#8196;PHP&#8196;</i>",
     "<i>&#8196;Linux&#8196;</i>",
     "<i>&#8196;Aprender&#8196;</i>",
-    "<i>&#8196;Tecnologia.&#8196;</i>"
+    "<i>&#8196;Tecnologia.&#8196;</i>",
   ],
   typeSpeed: 75,
   backSpeed: 50,
-  smartBackspace: true
+  smartBackspace: true,
 };
 
 var typed = new Typed(typedElem, options);
@@ -24,18 +24,18 @@ tippy("#email-icon", {
   animation: "scale",
   interactive: true,
   placement: "bottom",
-  arrow: true
+  arrow: true,
 });
 
 tippy("#profile-pic", {
   duration: [null, "200"],
   theme: "light",
   animation: "scale",
-  offset: [100, -20]
+  offset: [100, -20],
 });
 
 // Inicializando o efeito de scrollagem
 ScrollOut({
   once: true,
-  threshold: 0.5
+  threshold: 0.5,
 });
