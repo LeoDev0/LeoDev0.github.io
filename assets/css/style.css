@@ -396,16 +396,36 @@ footer a:hover {
   font-weight: 800;
 }
 
-/* CSS para a animação de fade-in na scrollagem*/
+/* CSS para a animações de fade-in na scrollagem*/
 [data-scroll] {
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
+  -webkit-transition: opacity 2s, transform 1.3s;
+  transition:  opacity 2s, transform 1.3s;
 }
 
-[data-scroll="in"] {
+.fade-in[data-scroll="in"] {
   opacity: 1;
 }
 
-[data-scroll="out"] {
+.fade-in[data-scroll="out"] {
   opacity: 0;
+}
+
+.fade-in-right[data-scroll="in"] {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(700px);
+}
+
+.fade-in-left[data-scroll="in"] {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-left[data-scroll="out"] {
+  opacity: 0;
+  transform: translateX(-700px);
 }
