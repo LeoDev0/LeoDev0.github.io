@@ -225,6 +225,15 @@ body {
     flex-direction: row-reverse;
 }
 
+/* botões com os links do projeto */
+.project-info a {
+    text-decoration: none;
+}
+
+.project-info span {
+    display: inline-block;
+}
+
 .tags {
     font-size: 10px;
     color: #e25b5b;
@@ -232,11 +241,15 @@ body {
     padding: 6px;
     background-color: #d65d5d28;
     margin-right: 5px;
+    margin-bottom: 5px;
 }
 
-/* botões com os links do projeto */
-.project-info a {
-    text-decoration: none;
+.neon-link {
+    color: #e25b5b;
+}
+
+.neon-link:hover {
+    text-shadow: 0px 2px 3px #e25b5b;
 }
 
 .animated-btn {
