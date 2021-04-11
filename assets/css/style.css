@@ -345,7 +345,7 @@ body {
 
 .form-field {
     font-size: 17px;
-    font-family: Noto sans;
+    font-family: inherit;
     font-weight: 400;
     border-radius: 10px;
     border: none;
@@ -353,7 +353,7 @@ body {
 }
 
 .submit-btn {
-    font-family: Lexend Deca, sans-serif;
+    font-family: inherit;
     font-size: 15px;
     background-color: #e25b5b;
     color: #ffffff;
