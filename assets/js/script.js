@@ -3,13 +3,13 @@ const typedElem = document.getElementById('typed');
 
 const options = {
     strings: [
-        // '<i>&#8196;Write code&#8196;</i>', // "&#8196;" é um caractere invisível no navegador que impede um bug em que os elementos acima da transição de palavras se movam
-        // '<i>&#8196;Learn&#8196;</i>',
-        // '<i>&#8196;Solve problems.&#8196;</i>',
-        '<i>&#8196;Programar&#8196;</i>',
-        '<i>&#8196;Linux&#8196;</i>',
-        '<i>&#8196;Aprender&#8196;</i>',
-        '<i>&#8196;Tecnologia.&#8196;</i>',
+        '<i>&#8196;Code&#8196;</i>', // "&#8196;" é um caractere invisível no navegador que impede um bug em que os elementos acima da transição de palavras se movam
+        '<i>&#8196;Learn&#8196;</i>',
+        '<i>&#8196;Solve problems.&#8196;</i>',
+    //     '<i>&#8196;Programar&#8196;</i>',
+    //     '<i>&#8196;Linux&#8196;</i>',
+    //     '<i>&#8196;Aprender&#8196;</i>',
+    //     '<i>&#8196;Tecnologia.&#8196;</i>',
     ],
     typeSpeed: 75,
     backSpeed: 50,
