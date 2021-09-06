@@ -123,6 +123,12 @@ body {
     margin-left: 20px;
 }
 
+@media (max-width: 420px) {
+    .navbar-icons > a:first-child {
+        display: none;
+    }
+}
+
 .logo,
 .navbar-icons {
     margin: 30px;
