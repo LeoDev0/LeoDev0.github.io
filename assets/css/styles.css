@@ -98,13 +98,13 @@ a {
 
 .section-hero h1 {
   text-align: center;
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: 3rem;
   margin-bottom: var(--spacing-sm);
   text-shadow: 0 0 5px rgba(240, 240, 240, 0.5);
 }
 
 .section-hero h2 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-size: 2.5rem;
   margin: 0;
   color: var(--primary-color);
 }
@@ -521,12 +521,7 @@ footer {
   }
 
   .section-hero h1 {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
     padding: 0 var(--spacing-sm);
-  }
-
-  .section-hero h2 {
-    font-size: clamp(1.2rem, 4vw, 2rem);
   }
 
   .contact-form form {
@@ -538,10 +533,6 @@ footer {
   .navbar-icons a {
     margin: var(--spacing-sm) 0;
     font-size: 1.6rem;
-  }
-
-  .footer-icons {
-    gap: var(--spacing-sm);
   }
 
   #back-to-top {
