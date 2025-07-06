@@ -1,120 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Primary Meta Tags -->
   <title>Leonardo T. Fernandes - Software Developer</title>
   <meta name="title" content="Leonardo T. Fernandes - Software Developer">
-  <meta name="description" content="I'm Leo and I like to Solve problems.">
-  
+  <meta name="description" content="I'm Leo and I like to solve problems.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://leofernandes.dev/">
   <meta property="og:title" content="Leonardo T. Fernandes - Software Developer">
-  <meta property="og:description" content="I'm Leo and I like to Solve problems.">
-  <meta property="og:image" content="https://leofernandes.dev/assets/images/meta3.png">
-  
+  <meta property="og:description" content="I'm Leo and I like to solve problems.">
+
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://leofernandes.dev/">
   <meta property="twitter:title" content="Leonardo T. Fernandes - Software Developer">
-  <meta property="twitter:description" content="I'm Leo and I like to Solve problems.">
-  <meta property="twitter:image" content="https://leofernandes.dev/assets/images/meta3.png">
-  <!--  -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta property="twitter:description" content="I'm Leo and I like to solve problems.">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/ico" href="assets/images/favicon.ico">
-  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
   <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css"/>
-  <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
 </head>
 
 <body>
-  <div class="section">
+  <!-- Upper bar with links -->
+  <nav class="navbar">
+    <div class="logo"><a href="#">&lt;LEO/&gt;</a></div>
+    <div class="navbar-icons">
+      <a target="_blank" rel="noopener noreferrer" href="https://t.me/leotf" aria-label="Telegram">
+        <i class="fab fa-telegram-plane"></i>
+      </a>
+      <a target="_blank" rel="noopener noreferrer" href="https://github.com/leodev0" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/leotf/" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a target="_blank" href="mailto:contact@leofernandes.dev" data-tippy-content="Email: contact@leofernandes.dev" id="email-icon" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <!-- Burger Menu -->
+    <button class="burger-menu" aria-label="Toggle menu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </nav>
+  <div class="menu-overlay"></div>
+
+  <!-- Hero Section -->
+  <section class="section-hero">
     <img 
       src="assets/images/head-site.jpeg" 
       id="profile-pic" 
-      alt="profile-pic" 
-      data-tippy-content="Hello! 😃"
+      alt="Leonardo Fernandes profile picture" 
+      data-tippy-content="Hello, friend."
     />
-    
+
     <h1>Hi, I'm Leo and I like to:</h1>
     <h2 id="typed"></h2>
 
     <div class="video-container">
-      <div class="navbar">
-        <div class="logo"><a href="#">&lt;LEO/&gt;</a></div>
-        <div class="navbar-icons">
-          <a target="_blank" rel="noopener noreferrer" href="https://t.me/leotf">
-            <i class="fab fa-telegram-plane"></i>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/leodev0">
-            <i class="fab fa-github"></i>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/leotf/">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a target="_blank" href="mailto:contact@leofernandes.dev" data-tippy-content="Email: contact@leofernandes.dev" id="email-icon">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-      </div>
-
       <div class="color-overlay"></div>
-      <video autoplay loop muted>
+      <video autoplay loop muted playsinline>
         <source src="assets/videos/bg.mp4" type="video/mp4" />
       </video>
     </div>
-  </div>
-    <div class="section4">
-      <h1>Get in touch</h1>
+  </section>
 
-      <div class="contact-form fade-in" data-scroll>
-        <form action="https://send.pageclip.co/vIGEHAXieh11rkr0t6dwapz3EWk9OjvM/contato-portfolio" class="pageclip-form" method="post">
-          <input id="email-input" class="form-field" type="email" name="email" required placeholder="What's your email?"><br>
-          <textarea id="message-input" class="form-field" name="corpo" cols="30" rows="10" required placeholder="Write me a message."></textarea><br>
+  <!-- Contact Section -->
+  <section class="section-contact">
+    <h1>Get in touch</h1>
 
-          <button type="submit" class="animated-btn submit-btn pageclip-form__submit">
-            <span>Send message</span>
-          </button>
-        </form>
-      </div>
+    <div class="contact-form fade-in" data-scroll>
+      <form action="https://send.pageclip.co/vIGEHAXieh11rkr0t6dwapz3EWk9OjvM/contato-portfolio" class="pageclip-form" method="post">
+        <input 
+          id="email-input" 
+          class="form-field" 
+          type="email" 
+          name="email" 
+          required 
+          placeholder="What's your email?"
+          aria-label="Email"
+        >
 
-      <footer>
-        <div class="footer-icons">
-          <a target="_blank" rel="noopener noreferrer" href="https://t.me/leotf">
-            <i class="fab fa-telegram-plane"></i>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/leodev0">
-            <i class="fab fa-github"></i>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/leotf/">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a target="_blank" href="mailto:contact@leofernandes.dev">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-        <div class="signature-container">
-          <a 
-            class="signature"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/LeoDev0/LeoDev0.github.io">
-            Designed and Built with <span style="color:red;">❤️</span> By Leo Fernandes
-          </a>
-        </div>
-      </footer>
+        <textarea 
+          id="message-input" 
+          class="form-field" 
+          name="corpo" 
+          rows="10" 
+          required 
+          placeholder="Write me a message."
+          aria-label="Message"
+        ></textarea>
+
+        <button type="submit" class="animated-btn submit-btn pageclip-form__submit">
+          <span>Send message</span>
+        </button>
+      </form>
     </div>
-    <a id="back-to-top" href="#">
-      <i class="fas fa-arrow-up"></i>
-    </a>
 
-  </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-icons">
+        <a target="_blank" rel="noopener noreferrer" href="https://t.me/leotf" aria-label="Telegram">
+          <i class="fab fa-telegram-plane"></i>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://github.com/leodev0" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/leotf/" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a target="_blank" href="mailto:contact@leofernandes.dev" aria-label="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      <div class="signature-container">
+        <a 
+          class="signature"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/LeoDev0/LeoDev0.github.io">
+          Designed and Built with <span style="color:var(--primary-color);">❤️</span> By Leo Fernandes
+        </a>
+      </div>
+    </footer>
+  </section>
 
+  <!-- Back to Top Button -->
+  <a id="back-to-top" href="#" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Scripts -->
   <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   <script src="https://kit.fontawesome.com/cfd8b43b94.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
@@ -123,5 +153,4 @@
   <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
-
 </html>
