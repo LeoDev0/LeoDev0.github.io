@@ -1,57 +1,83 @@
-// Matrix animation
+// Matrix background effect
 function createMatrixBackground() {
   const canvas = document.createElement('canvas');
   canvas.classList.add('matrix-bg');
-  document.body.appendChild(canvas);
+  document.body.prepend(canvas);
 
   const ctx = canvas.getContext('2d');
 
-  // Set canvas dimensions
+  // Characters for the matrix effect
+  const characters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789';
+  const fontSize = 15;
+  let drops = [];
+
+  // Cache the primary color and update it when needed
+  let primaryColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--primary-color').trim() || '#00ff9d';
+
   function setCanvasDimensions() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    const newColumns = Math.floor(canvas.width / fontSize);
+    const oldLength = drops.length;
+    drops.length = newColumns;
+
+    for (let i = oldLength; i < newColumns; i++) {
+      drops[i] = Math.floor(Math.random() * -100);
+    }
   }
 
   setCanvasDimensions();
   window.addEventListener('resize', setCanvasDimensions);
 
-  // Characters for the matrix effect
-  const characters = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789';
-  const columns = Math.floor(canvas.width / 20); // Character width
-  const drops = [];
-
-  // Initialize drops
-  for (let i = 0; i < columns; i++) {
-    drops[i] = Math.random() * -100;
-  }
+  // Refresh cached color on theme changes or transitions
+  const updateColor = () => {
+    primaryColor = getComputedStyle(document.documentElement)
+      .getPropertyValue('--primary-color').trim() || '#00ff9d';
+  };
+  window.addEventListener('transitionend', updateColor);
 
   function draw() {
     // Semi-transparent black to create fade effect
     ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = '#00ff9d'; // Matrix green
-    ctx.font = '15px monospace';
+    ctx.fillStyle = primaryColor;
+    ctx.font = `${fontSize}px monospace`;
 
     // Draw characters
     for (let i = 0; i < drops.length; i++) {
-      // Random character
       const text = characters.charAt(Math.floor(Math.random() * characters.length));
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-      ctx.fillText(text, i * 20, drops[i] * 20);
-
-      // Send the drop back to the top randomly after it crosses the screen
-      if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
+      // Randomly reset drops to the top after they cross the screen
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
         drops[i] = 0;
       }
 
-      // Increment y coordinate
       drops[i]++;
     }
   }
 
-  // Run the animation
-  setInterval(draw, 35);
+  // Use requestAnimationFrame for better performance and battery life
+  let lastTime = 0;
+  const fps = 28; // ~35ms interval
+  const interval = 1000 / fps;
+  let animationId;
+
+  function loop(timestamp) {
+    if (!lastTime) lastTime = timestamp;
+    const elapsed = timestamp - lastTime;
+
+    if (elapsed > interval) {
+      draw();
+      lastTime = timestamp - (elapsed % interval);
+    }
+    animationId = requestAnimationFrame(loop);
+  }
+
+  animationId = requestAnimationFrame(loop);
 }
 
 // Typing effect
@@ -155,6 +181,13 @@ function initBurgerMenu() {
 
   if (!burgerMenu || !navbarIcons || !menuOverlay) return;
 
+  function closeMenu() {
+    burgerMenu.classList.remove('active');
+    navbarIcons.classList.remove('active');
+    menuOverlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  }
+
   burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle('active');
     navbarIcons.classList.toggle('active');
@@ -167,36 +200,23 @@ function initBurgerMenu() {
   // Close menu when clicking on a link
   const navLinks = navbarIcons.querySelectorAll('a');
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      burgerMenu.classList.remove('active');
-      navbarIcons.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      document.body.classList.remove('menu-open');
-    });
+    link.addEventListener('click', closeMenu);
   });
 
   // Close menu when clicking on the overlay
-  menuOverlay.addEventListener('click', () => {
-    burgerMenu.classList.remove('active');
-    navbarIcons.classList.remove('active');
-    menuOverlay.classList.remove('active');
-    document.body.classList.remove('menu-open');
-  });
+  menuOverlay.addEventListener('click', closeMenu);
 
   // Close menu when clicking outside
   document.addEventListener('click', (e) => {
     if (!navbarIcons.contains(e.target) && !burgerMenu.contains(e.target) && navbarIcons.classList.contains('active')) {
-      burgerMenu.classList.remove('active');
-      navbarIcons.classList.remove('active');
-      menuOverlay.classList.remove('active');
-      document.body.classList.remove('menu-open');
+      closeMenu();
     }
   });
 }
 
 // Initialize all functions when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  // createMatrixBackground();
+  createMatrixBackground();
   initTypingEffect();
   initNavbarScroll();
   initBackToTopButton();
